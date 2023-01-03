@@ -37,9 +37,9 @@ class UserBusiness: UserBusinessProtocol {
         }
     }
     
-    private func getParameters(email: String, password: String) -> [AnyHashable :  Any] {
+    private func getParameters(email: String, password: String) -> [String :  Any] {
         let userModel = UserModel(email: email, password: password)
-        let parameters: [AnyHashable : Any] = ["body" : ["userModel" : userModel]]
+        let parameters: [String : Any] = ["body" : ["userModel" : userModel]]
         
         return parameters
     }
